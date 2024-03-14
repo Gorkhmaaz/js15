@@ -129,7 +129,87 @@ console.log('Минимальное:', min)
 console.log('Среднее:', average)
 
 
-////////////////////////////////PART 2 //////////////////////////////////////////////////////////////////
+////////////////////////////////  PART 2 //////////////////////////////////////////////////////////////////
+////Task 1
+function swapValues([first, second]){
+    return [second,first]
+}
+console.log(swapValues([3,55]))
+
+////Task 2
+const coordinate = [15,30]
+const [x,y] = coordinate
+console.log('x',x)
+console.log('y',y)
+
+////Task 3
+function getDistance(pointA, pointB) {
+    const [x1, y1] = pointA;
+    const [x2, y2] = pointB;
+    const distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    return distance;
+}
+const pointA = [1, 2];
+const pointB = [4, 6];
+const distance = getDistance(pointA, pointB);
+console.log("Расстояние между точками:", distance);
+
+///Task 4
+const grades = [12,11,8,9,10]
+const [firstStudent,secondStudent,thirdStudent] = grades
+console.log('first student', firstStudent)
+console.log('second student', secondStudent)
+console.log('third student', thirdStudent)
+
+
+////Task 5
+function getAverage(grades){
+    const [first, ...args] = grades
+    let sum = first
+    for (const grade of args){
+        sum += grade
+    }
+    const average = sum / grades.length
+    return average
+}
+const grades1 = [12,10,8,6,11]
+ const averagesGrade = getAverage(grades1)
+console.log(averagesGrade)
+
+///Task 6
+const student = ['Vasya', 19, [12,11,10,9,10]]
+const [name2,age2] = student
+console.log('Name', name2)
+console.log('age',age2)
+
+
+///Task 7
+function printStudentInfo(student){
+    const [name3,age3,grades3] = student1
+    console.log('name', name3)
+    console.log('age', age3)
+    console.log('grades',grades3)
+}
+const student1 =['Alex', 20, [11,10,11,12,10]]
+printStudentInfo()
+
+///Task 8
+const colors = ['pink','blue','yellow','green','white']
+const [firstColor,secondColor,thirdColor] = colors
+console.log('first color',firstColor)
+console.log('second color',secondColor)
+console.log('third color',thirdColor)
+
+///Task 9
+function combineColors(colors1,colors2){
+    return [...colors1, ...colors2]
+}
+const colors1 = ["White", "Yellow", "Blue"];
+const colors2 = ["Pink", "Black", "Grey"];
+const allColors = combineColors(colors1,colors2)
+console.log('All colors',allColors)
+
+
 
 
 
